@@ -1,17 +1,17 @@
 # First stage: Build the application
-FROM ubuntu:22.04 AS build
+# FROM ubuntu:22.04 AS build
 
-# Install Java and Maven
-RUN apt-get update && apt-get install -y openjdk-21-jdk maven
+# # Install Java and Maven
+# RUN apt-get update && apt-get install -y openjdk-21-jdk maven
 
-# Set the working directory
-WORKDIR /app
+# # Set the working directory
+# WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+# # Copy the current directory contents into the container at /app
+# COPY . /app
 
-# Build the application
-RUN mvn clean package -DskipTests
+# # Build the application
+# RUN mvn clean package -DskipTests
 
 # Second stage: Run the application using Java 21
 FROM eclipse-temurin:22-jre-alpine
