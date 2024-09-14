@@ -1,13 +1,10 @@
 pipeline
 {
-    agent
-    {
-        label any
-    }
+    
     tools
     {
         maven 'Maven3'
-        jdk 'jdk17'
+        jdk 'java17'
     }
 
     stages
@@ -20,7 +17,7 @@ pipeline
             // url is the URL of the repository
             steps
             {
-                git branch: 'main', credentialsId: 'github', url: ''
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/dassudip2001/spring-boot-api.git'
             }
         }
 
