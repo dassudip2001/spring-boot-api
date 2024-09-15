@@ -11,7 +11,7 @@ pipeline
     {
         APP_NAME = "spring-boot-api"
         RELEASE = "1.0.0"
-        DOCKER_USER = 'dassudip2001'
+        DOCKER_USER = 'sudipdas2001'
         DOCKER_PASS = 'dockerhub'
         IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
         IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
